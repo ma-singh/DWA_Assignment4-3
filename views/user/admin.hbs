@@ -1,0 +1,58 @@
+<h1 class="text-center">Inventory Management</h1>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<form method="post" action="/user/admin">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="title" class="control-label">Issue Title</label>
+						<input type="text" class="form-control" name="title" />
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="description" class="control-label">Description</label>
+						<textarea class="form-control" name="description"></textarea>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="price" class="control-label">Price</label>
+						<input type="text" class="form-control" name="price" />
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="imagePath" class="control-label">Image Path</label>
+						<input type="text" class="form-control" name="imagePath" />
+					</div>
+				</div>
+				<input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+				<div class="col-xs-12">
+					<div class="form-group">
+						<input type="submit" class="btn btn-success" value="Add to Inventory" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<ul class="list-group">
+		{{#each products}}
+			<li class="list-group-item inventory clearfix">
+				<p class="pull-left">{{ this.title }} | {{ this.price }} </p>
+				<form action="/user/admin/remove/{{ this._id }}">
+					<input type="hidden" value="DELETE" name="_method" />
+					<button type="submit" class="pull-right"><span class="glyphicon glyphicon-remove alert-danger"></span></button>
+				</form>
+				<a href="/user/admin/edit/{{ this._id }}"><span class="glyphicon glyphicon-pencil pull-right"></span></a>
+			</li>
+		{{/each}}
+	</ul>
+	</div>
+</div>

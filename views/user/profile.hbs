@@ -1,0 +1,26 @@
+<div class="row class="text-right"">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>{{ user }}</h1>
+		{{#if isAdmin}}
+			<a href="/user/admin">Inventory Management</a>
+		{{/if}}
+		<hr>
+		<h2>Order History</h2>
+		{{# each orders }}
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h4>Items</h4>
+					<ul class="list-group">
+						{{# each this.items }}
+		  					<li class="list-group-item">
+		    					<span class="badge">{{ this.price }}</span>
+		    					{{ this.item.title }} | {{ this.quantity }} Issue(s)
+		  					</li>
+	  					{{/each}}
+					</ul>
+				</div>
+				<div class="panel-footer"><strong>${{ this.cart.totalPrice }}</strong></div>
+			</div>
+		{{/each}}
+	</div>
+</div>
