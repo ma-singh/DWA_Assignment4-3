@@ -57,7 +57,7 @@ git checkout development
 git merge <FEATURE_NAME>
 ```
 
-![Workflow](https://github.com/ma-singh/DWA_Assignment4-1.git)
+![Workflow](http://i.imgur.com/f2drHGV.jpg)
 
 # Deployment
 
