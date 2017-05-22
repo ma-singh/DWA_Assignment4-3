@@ -57,6 +57,8 @@ git checkout development
 git merge <FEATURE_NAME>
 ```
 
+![Workflow](https://github.com/ma-singh/DWA_Assignment4-1.git)
+
 # Deployment
 
 Commit changes you've made during your local development to GitHub
