@@ -102,7 +102,7 @@ router.post('/checkout', function(req, res, next) {
 	var cart = new Cart(req.session.cart);
 
 	var payment = stripe.charges.create({
-		amount: cart.totalPrice * 100,
+		amount: Math.round(cart.totalPrice * 100),
 		currency: "usd",
 		description: "Stripe Payment",
 		source: token,

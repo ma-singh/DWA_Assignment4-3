@@ -37,7 +37,7 @@ npm start
 ```
 > **NOTE**: This points at the `./bin/www` file to begin running the application, which you can see in your start scripts in the *package.json*.
 
-View your application at [http://localhost:8000](http://localhost:8000)
+View your application at [http://localhost:3000](http://localhost:3000)
 
 ## Workflow and Development
 
@@ -57,7 +57,7 @@ git checkout development
 git merge <FEATURE_NAME>
 ```
 
-![Workflow](https://github.com/ma-singh/DWA_Assignment4-1.git)
+![Workflow](http://i.imgur.com/f2drHGV.jpg)
 
 # Deployment
 
